@@ -9,7 +9,7 @@ class TestTaskManager(unittest.TestCase):
     def test_add_task(self):
         task = self.manager.add_task("Study DevOps")
         self.assertEqual(task["title"], "Study DevOps")
-        self.assertEqual(len(self.manager.get_tasks()), 2)  # WRONG ON PURPOSE
+        self.assertEqual(len(self.manager.get_tasks()), 1) 
 
     def test_complete_task(self):
         task = self.manager.add_task("Finish lab")
