@@ -17,8 +17,11 @@ class TaskManager:
 
     def get_tasks(self):
         return list(self.tasks)
-
+    
+    """Mark the task with the given id as completed."""
     def complete_task(self, task_id):
+        if not isinstance(task_id, int):
+            raise ValueError("Task ID must be a number.")
         for task in self.tasks:
             if task["id"] == task_id:
                 task["done"] = True
