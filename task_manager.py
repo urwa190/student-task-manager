@@ -7,7 +7,10 @@ class TaskManager:
         self._next_id = 1
 
     def add_task(self, title):
-        task = {"id": self._next_id, "title": title, "done": False}
+        """Add a task. Raises ValueError if the title is empty."""
+        if not title or not title.strip():
+            raise ValueError("Task title cannot be empty.")
+        task = {"id": self._next_id, "title": title.strip(), "done": False}
         self.tasks.append(task)
         self._next_id += 1
         return task
