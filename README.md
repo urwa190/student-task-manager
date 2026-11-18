@@ -7,4 +7,4 @@ A simple Python console application to add, display, complete and delete tasks.
     python task_manager.py
 
 
-Project status: Planning
+Project status: Completed
